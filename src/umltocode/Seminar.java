@@ -17,6 +17,7 @@ public class Seminar {
         this.teacher = teacher;
         attendances = new ArrayList<>();
         subjects =  new ArrayList<>();
+        this.teacher.addSeminar(this);
         
     }
     
@@ -25,9 +26,13 @@ public class Seminar {
         attendances.add(attendance);
     }
     
+    public void addSubject(Subject sub){
+        subjects.add(sub);
+    }
+    
     public void getTotalAttendance()
     {
-        System.out.println(attendances.size());
+        System.out.println(attendances.size() + " is the total attendance");
     }
     
     public Seminar getSeminar(){
@@ -35,5 +40,11 @@ public class Seminar {
     }
     public String getName(){
         return name;
+    }
+    
+    public void printSubjects(){
+        for(Subject s : subjects){
+            s.viewSubjectInfo();
+        }
     }
 }

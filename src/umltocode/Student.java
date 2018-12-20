@@ -6,14 +6,17 @@ import java.util.List;
 
 public class Student {
     private String name;
-    List<Attendance> attendances = new ArrayList<>();
+    List<Attendance> attendances;
     
-    public Student()
-    {}
+    public Student(String name)
+    {
+        this.name=name;
+        attendances = new ArrayList<>();
+    }
     
     public void getSeminarsAttended()
     {
-        System.out.println(attendances.size());
+        System.out.println(attendances.size() + " attended");
     }
     
     public void attendSeminar(Attendance attendance)
