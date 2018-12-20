@@ -32,7 +32,7 @@ public class Seminar {
     
     public void getTotalAttendance()
     {
-        System.out.println(attendances.size() + " is the total attendance");
+        System.out.println(attendances.size() + " is the total attendance for " + name +"\n");
     }
     
     public Seminar getSeminar(){
@@ -43,8 +43,10 @@ public class Seminar {
     }
     
     public void printSubjects(){
+        System.out.println("This seminar has the subjects:");
         for(Subject s : subjects){
             s.viewSubjectInfo();
         }
+        System.out.println();
     }
 }

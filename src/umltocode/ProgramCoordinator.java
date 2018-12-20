@@ -23,7 +23,7 @@ public class ProgramCoordinator {
     public void findTeacher(String s){
         for(Teacher teacher : teacherList){
             if(s.equalsIgnoreCase(teacher.getName())){
-                System.out.println("Teacher found " + teacher.getName());
+                System.out.println(teacher.getName() + " is in the system\n");
             }
         }
     }

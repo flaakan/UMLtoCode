@@ -16,7 +16,11 @@ public class Student {
     
     public void getSeminarsAttended()
     {
-        System.out.println(attendances.size() + " attended");
+        if(attendances.size() ==1)
+            System.out.println(name + " has attended " + attendances.size() + " seminar\n");
+        else
+            System.out.println(name + " has attended " + attendances.size() + " seminars\n");
+        
     }
     
     public void attendSeminar(Attendance attendance)
